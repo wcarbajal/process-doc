@@ -12,27 +12,25 @@ export const metadata: Metadata = {
 
 const SignIn: React.FC = () => {
   return (
-    <DefaultLayout>
-      <Breadcrumb pageName="Sign In" />
-
-      <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
-        <div className="flex flex-wrap items-center">
+    <div className="h-screen  flex justify-center items-center">
+      <div className="flex justify-center  rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
+        
           <div className="hidden w-full xl:block xl:w-1/2">
             <div className="px-26 py-17.5 text-center">
               <Link className="mb-5.5 inline-block" href="/">
                 <Image
                   className="hidden dark:block"
-                  src={"/images/logo/logo.svg"}
+                  src={ "/images/logo/logo.svg" }
                   alt="Logo"
-                  width={176}
-                  height={32}
+                  width={ 176 }
+                  height={ 32 }
                 />
                 <Image
                   className="dark:hidden"
-                  src={"/images/logo/logo-dark.svg"}
+                  src={ "/images/logo/logo-dark.svg" }
                   alt="Logo"
-                  width={176}
-                  height={32}
+                  width={ 176 }
+                  height={ 32 }
                 />
               </Link>
 
@@ -287,7 +285,7 @@ const SignIn: React.FC = () => {
 
                 <div className="mt-6 text-center">
                   <p>
-                    Don’t have any account?{" "}
+                    Don’t have any account?{ " " }
                     <Link href="/auth/signup" className="text-primary">
                       Sign Up
                     </Link>
@@ -296,9 +294,9 @@ const SignIn: React.FC = () => {
               </form>
             </div>
           </div>
-        </div>
+        
       </div>
-    </DefaultLayout>
+      </div>
   );
 };
 
