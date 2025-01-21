@@ -1,0 +1,7 @@
+AUTH_SECRET="o5bKijQnDOqIgefuM4WBB8+VzkqH3RJPzsP5lo8nqG4Ipm82OPI6j+elKuw="
+
+DB_USER=admin
+DB_NAME=processdoc
+DB_PASSWORD=951@dalXtofer
+
+DATABASE_URL=postgresql://admin:951@dalXtofer@localhost:5432/processdoc?schema=public

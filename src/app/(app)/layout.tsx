@@ -6,11 +6,13 @@ import "@/css/style.css";
 import React, { useEffect, useState, useTransition } from "react";
 import Loader from "@/components/common/Loader";
 
-export default function RootLayout({
+
+export default  function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   
   const [loading, setLoading] = useState<boolean>(false);
   const [isPending, startTransition] = useTransition()
