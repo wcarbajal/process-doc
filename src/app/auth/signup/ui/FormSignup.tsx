@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 };
 
 import React, { useState, useTransition } from 'react';
-import { SchemaSignin } from '@/interface/auth/auth.interface';
+import { SchemaSignin, SchemaSignup } from '@/interface/auth/auth.interface';
 
 import { loginAction } from '@/actions';
 
-export const FormSignin = () => {
+export const FormSignup = () => {
 
   const [ errorMessage, setErrorMessage ] = useState<String | undefined>();
   const [ isPending, startTransition ] = useTransition();
@@ -26,8 +26,9 @@ export const FormSignin = () => {
     handleSubmit,
     watch,
     formState: { errors }
-  } = useForm<SchemaSignin>( {
+  } = useForm<SchemaSignup>( {
     defaultValues: {
+      name:'',
       email: "",
       password: "",
 
@@ -76,14 +77,11 @@ export const FormSignin = () => {
               />
             </Link> */}
 
-            <p className="2xl:px-20 mb-2">
+            <p className="2xl:px-20">
               Programa Nacional de Becas y Crédito Educativbo
             </p>
-            <p className="text-xl font-bold">
-             PROCESS DOC
-            </p>
 
-            <span className="mt-5 inline-block">
+            <span className="mt-15 inline-block">
               <svg
                 width="350"
                 height="350"
@@ -117,9 +115,8 @@ export const FormSignin = () => {
         <div className="w-full border-stroke dark:border-strokedark xl:w-1/2 xl:border-l-2">
           <div className="w-full p-4 sm:p-12.5 xl:p-17.5">
             <span className="mb-1.5 block font-medium">Unidad de Modernización de la Gestión</span>
-            
             <h2 className="mb-9 text-2xl font-bold text-black dark:text-white sm:text-title-xl2">
-              Inicio de session 
+              Process Doc
             </h2>
 
             <form method='POST' onSubmit={ onSubmit }>

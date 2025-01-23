@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import DefaultLayout from "@/components/Layouts/DefaultLayout";
 import { auth } from '@/auth';
 import { redirect } from 'next/navigation';
+import { LogoutButton } from '@/components';
 
 
 export const metadata: Metadata = {
@@ -13,17 +14,22 @@ export const metadata: Metadata = {
 
 export default async function Home() {
 
-  const session = await auth()
+  const session = await auth();
 
-  if(!session){
-    
-    redirect('/auth/signin')
-    
-    
+  if ( !session ) {
+
+    redirect( '/auth/signin' );
+
+
   }
   return (
     <>
       <DefaultLayout>
+        <div>
+          <pre>{ JSON.stringify( session, null, 2 ) }</pre>
+          <LogoutButton />
+
+        </div>
         <ECommerce />
       </DefaultLayout>
     </>
