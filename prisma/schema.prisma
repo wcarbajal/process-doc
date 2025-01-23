@@ -27,6 +27,9 @@ model User {
   emailVerified DateTime? @map("email_verified")
   image         String?
   accounts      Account[]
+  Process       Process[]
+  Owner         Owner?
+  Manager       Manager?
 
   @@map("users")
 }
@@ -59,4 +62,58 @@ model VerificationToken {
 
   @@unique([identifier])
   @@map("verification_tokens")
+}
+
+enum State {
+  s1_pendiente
+  s2_elaborandose
+  s3_elaborando
+  s4_validandose
+  s5_validando
+  s6_aprobandoseOficina
+  s7_aprobandoOoficina
+  s8_validandoseUNOME
+  s9_validadoUNOME
+  s10_aprobandosePRONABEC
+  s11_aprobandoPRONABEC
+}
+
+model Owner {
+  id     String @id @default(cuid())
+  nombre String
+  userId String @unique
+  user   User   @relation(fields: [userId], references: [id])
+
+  Process Process[]
+}
+
+model Manager {
+  id     String @id @default(cuid())
+  nombre String
+  userId String @unique
+  user   User   @relation(fields: [userId], references: [id])
+
+  Process Process[]
+}
+
+model Process {
+  id     String @id @default(cuid())
+  codigo String
+  nombre String
+  nivel  String
+  state  State  @default(s1_pendiente)
+
+  OwnerId String
+  owner   Owner  @relation(fields: [OwnerId], references: [id])
+
+  userId      String
+  user        User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  processType String
+
+  Manager   Manager? @relation(fields: [managerId], references: [id])
+  managerId String?
+
+  hijos     Process[]
+  Process   Process?  @relation(fields: [processId], references: [id])
+  processId String?
 }
