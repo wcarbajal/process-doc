@@ -1,3 +1,10 @@
+export const Mapa = {
+  nombre: 'Mapa Pronabec',  
+  entrada: 'Ciudadanos de bajos, insuficientes recursos o alto rendimiento académico con barreras de acceso a la educación superior de calidad',
+  salida: 'Ciudadanos que accedieron a educación superior de calidad y contribuyen en el desarrollo económico y social'
+}
+
+
 export const listProcess = [
   {
     codigo: "PE01-PRONABEC",

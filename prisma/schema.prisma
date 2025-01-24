@@ -93,7 +93,7 @@ model Owner {
 }
 
 model Manager {
-  id     String @id @default(cuid())  
+  id     String @id @default(cuid())
   userId String @unique
   user   User   @relation(fields: [userId], references: [id])
 
@@ -101,26 +101,37 @@ model Manager {
 }
 
 model Process {
-  id     String      @id @default(cuid())
-  code String
-  name String
+  id          String      @id @default(cuid())
+  code        String
+  name        String
   description String
-  level  String
-  type   TypeProcess
-  state  State       @default(s1_pendiente)
-  createdAt DateTime   @default(now())
-  updatedAt DateTime?   @updatedAt
+  level       String
+  type        TypeProcess
+  state       State       @default(s1_pendiente)
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime?   @updatedAt
 
   OwnerId String
   owner   Owner  @relation(fields: [OwnerId], references: [id])
 
-  userId      String
-  user        User   @relation(fields: [userId], references: [id], onDelete: Cascade)
-  
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   Manager   Manager? @relation(fields: [managerId], references: [id])
   managerId String?
 
   sons         Process[] @relation("sons")
   sonsRelation Process[] @relation("sons")
+
+  Mapa   Mapa?   @relation(fields: [mapaId], references: [id])
+  mapaId String?
+}
+
+model Mapa {
+  id     String @id @default(cuid())
+  name   String
+  input  String
+  output String
+
+  process Process[]
 }
