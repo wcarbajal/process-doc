@@ -78,9 +78,14 @@ enum State {
   s11_aprobandoPRONABEC
 }
 
+enum TypeProcess {
+  strategy
+  operative
+  support
+}
+
 model Owner {
   id     String @id @default(cuid())
-  nombre String
   userId String @unique
   user   User   @relation(fields: [userId], references: [id])
 
@@ -88,8 +93,7 @@ model Owner {
 }
 
 model Manager {
-  id     String @id @default(cuid())
-  nombre String
+  id     String @id @default(cuid())  
   userId String @unique
   user   User   @relation(fields: [userId], references: [id])
 
@@ -97,23 +101,26 @@ model Manager {
 }
 
 model Process {
-  id     String @id @default(cuid())
-  codigo String
-  nombre String
-  nivel  String
-  state  State  @default(s1_pendiente)
+  id     String      @id @default(cuid())
+  code String
+  name String
+  description String
+  level  String
+  type   TypeProcess
+  state  State       @default(s1_pendiente)
+  createdAt DateTime   @default(now())
+  updatedAt DateTime?   @updatedAt
 
   OwnerId String
   owner   Owner  @relation(fields: [OwnerId], references: [id])
 
   userId      String
   user        User   @relation(fields: [userId], references: [id], onDelete: Cascade)
-  processType String
+  
 
   Manager   Manager? @relation(fields: [managerId], references: [id])
   managerId String?
 
-  hijos     Process[]
-  Process   Process?  @relation(fields: [processId], references: [id])
-  processId String?
+  sons         Process[] @relation("sons")
+  sonsRelation Process[] @relation("sons")
 }

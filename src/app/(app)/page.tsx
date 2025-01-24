@@ -24,7 +24,7 @@ export default async function Home() {
   }
   return (
     <>
-      <DefaultLayout>
+      <DefaultLayout >
         <div>
           <pre>{ JSON.stringify( session, null, 2 ) }</pre>
           <LogoutButton />

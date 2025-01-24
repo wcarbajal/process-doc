@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 };
 
 import React, { useState, useTransition } from 'react';
-import { SchemaSignin, SchemaSignup } from '@/interface/auth/auth.interface';
+import {  SchemaSignup } from '@/interface/auth/auth.interface';
 
-import { loginAction } from '@/actions';
+import { loginAction, registerAccion } from '@/actions';
 
 export const FormSignup = () => {
 
@@ -37,8 +37,9 @@ export const FormSignup = () => {
 
   const onSubmit = handleSubmit( async ( values ) => {
     setErrorMessage( undefined );
+
     startTransition( async () => {
-      const response = await loginAction( values );
+      const response = await registerAccion( values );
 
       if ( response.success ) {
         router.push( "/" );
@@ -116,10 +117,52 @@ export const FormSignup = () => {
           <div className="w-full p-4 sm:p-12.5 xl:p-17.5">
             <span className="mb-1.5 block font-medium">Unidad de Modernización de la Gestión</span>
             <h2 className="mb-9 text-2xl font-bold text-black dark:text-white sm:text-title-xl2">
-              Process Doc
+              Registro de usuario
             </h2>
 
             <form method='POST' onSubmit={ onSubmit }>
+
+            <div className="mb-4">
+                <label className="mb-2.5 block font-medium text-black dark:text-white">
+                  Nombres
+                </label>
+                <div className="relative">
+                  <input
+                    type="name"
+                    placeholder="Ingrese sus nombres"
+                    className="w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 text-black outline-none focus:border-primary focus-visible:shadow-none dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                    { ...register( 'name',
+                      {
+                        required: {
+                          value: true,
+                          message: 'El nombre es obligatorio'
+                        }
+
+                      }
+                    ) }
+                  />
+                  {
+                    errors.email && (
+                      <span className="text-red-500">{ errors.email.message }</span>
+                    )
+                  }
+
+                  <span className="absolute right-4 top-4">
+                    <svg
+                      className="fill-current"
+                      width="22"
+                      height="22"
+                      viewBox="0 0 22 22"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g opacity="0.5">
+                        <path d="M 15.996094 1.0039062 C 11.589664 1.0039062 8.0019573 4.5916469 8.0019531 8.9980469 C 8.0019557 11.774941 9.4291681 14.22817 11.585938 15.664062 C 5.4606227 17.55205 0.99608756 23.262484 0.99609375 30 A 1.0001 1.0001 0 0 0 2 31.003906 L 30 31.003906 A 1.0001 1.0001 0 0 0 30.996094 30 C 30.9961 23.263163 26.534518 17.552631 20.410156 15.664062 C 22.569029 14.228159 23.998044 11.774891 23.998047 8.9980469 C 23.998043 4.5916469 20.402524 1.0039062 15.996094 1.0039062 z M 15.996094 2.9960938 C 19.321645 2.9960938 21.998044 5.6725162 21.998047 8.9980469 C 21.998044 12.323615 19.321645 15 15.996094 15 C 12.670543 15 10.001956 12.323615 10.001953 8.9980469 C 10.001956 5.6725162 12.670543 2.9960938 15.996094 2.9960938 z M 15.996094 17 C 22.834013 17 28.271717 22.305487 28.804688 29.003906 L 3.1972656 29.003906 C 3.7302358 22.305487 9.1581737 17 15.996094 17 z " />
+                      </g>
+                    </svg>
+                  </span>
+                </div>
+              </div>
               <div className="mb-4">
                 <label className="mb-2.5 block font-medium text-black dark:text-white">
                   Email
@@ -225,6 +268,8 @@ export const FormSignup = () => {
                 </div>
               </div>
 
+              
+
               <div className="mb-5">
                 <button disabled={ isPending } type='submit' className="button-primario">Enviar </button>
 
@@ -237,8 +282,8 @@ export const FormSignup = () => {
 
               <div className="mt-6 text-center">
                 <p>
-                  ¿No tienes una cuenta?{ " " }
-                  <Link href="/auth/signup" className="text-primary">
+                  Ya tienes una cuenta?{ " " }
+                  <Link href="/auth/signin" className="text-primary">
                     Sign Up
                   </Link>
                 </p>

@@ -12,6 +12,8 @@ const SidebarItem = ({ item, pageName, setPageName }: any) => {
   };
 
   const pathname = usePathname();
+  
+  
 
   const isActive = (item: any) => {
     if (item.route === pathname) return true;
@@ -25,7 +27,7 @@ const SidebarItem = ({ item, pageName, setPageName }: any) => {
 
   return (
     <>
-      <li>
+      <li  >
         <Link
           href={item.route}
           onClick={handleClick}
