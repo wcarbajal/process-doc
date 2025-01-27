@@ -132,6 +132,7 @@ model Process {
   code        String
   name        String
   description String
+  diagram     String?
   level       String
   type        TypeProcess
   state       State       @default(s1_pendiente)
