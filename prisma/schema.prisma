@@ -27,9 +27,8 @@ model User {
   emailVerified DateTime? @map("email_verified")
   image         String?
   accounts      Account[]
-  Process       Process[]
-  Owner         Owner?
-  Manager       Manager?
+
+  Manager Manager?
 
   @@map("users")
 }
@@ -84,10 +83,38 @@ enum TypeProcess {
   support
 }
 
+enum UnidadFuncional {
+  unidad_funcional_1  @map("Dirección Ejecutiva")
+  unidad_funcional_2  @map("Dirección de Coordinación Nac. y Cooperación Internacional")
+  unidad_funcional_3  @map("Dirección de Gestión de Becas")
+  unidad_funcional_4  @map("Subdirección de Evaluación y Selección")
+  unidad_funcional_5  @map("Subdirección de Seguimiento y Supervisión")
+  unidad_funcional_6  @map("Dirección de Gestión de Crédito Educativo")
+  unidad_funcional_7  @map("Subdirección de Evaluación y Otorgamiento")
+  unidad_funcional_8  @map("Subdirección de Seguimiento y Cumplimiento")
+  unidad_funcional_9  @map("Dirección de Acompañamiento Socioemocional y Bienestar")
+  unidad_funcional_10 @map("Oficina de Asesoría Jurídica")
+  unidad_funcional_11 @map("Oficina de Planeamiento y Presupuesto")
+  unidad_funcional_12 @map("Unidad de Modernización de La Gestión")
+  unidad_funcional_13 @map("Unidad de Estudios Sociales e Investigación")
+  unidad_funcional_14 @map("Unidad de Planeamiento")
+  unidad_funcional_15 @map("Unidad de Presupuesto")
+  unidad_funcional_16 @map("Oficina de Tecnologías de la Información")
+  unidad_funcional_17 @map("Oficina de Gestión de Recursos Humanos")
+  unidad_funcional_18 @map("Oficina de Atención a la Ciudadanía y Gestión Documental")
+  unidad_funcional_19 @map("Oficina de Comunicaciones y Relaciones Institucionales")
+  unidad_funcional_20 @map("Oficina de Administración y Finanzas")
+  unidad_funcional_21 @map("Unidad de Abastecimiento")
+  unidad_funcional_22 @map("Unidad de Contabilidad y Control Previo")
+  unidad_funcional_23 @map("Unidad de Subvenciones y Financiamiento")
+  unidad_funcional_24 @map("Unidad de Tesorería")
+}
+
 model Owner {
-  id     String @id @default(cuid())
-  userId String @unique
-  user   User   @relation(fields: [userId], references: [id])
+  id              String           @id @default(cuid())
+  nombre          String
+  apellidos       String
+  unidadFuncional UnidadFuncional?
 
   Process Process[]
 }
@@ -111,11 +138,8 @@ model Process {
   createdAt   DateTime    @default(now())
   updatedAt   DateTime?   @updatedAt
 
-  OwnerId String
-  owner   Owner  @relation(fields: [OwnerId], references: [id])
-
-  userId String
-  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  ownerid String
+  owner   Owner  @relation(fields: [ownerid], references: [id])
 
   Manager   Manager? @relation(fields: [managerId], references: [id])
   managerId String?

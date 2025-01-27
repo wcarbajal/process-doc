@@ -9,7 +9,10 @@ export interface Process {
 }
 
 export interface Mapa {
-  nombre: string;
-  entrada: string;
-  salida: string;
+  name: string;
+  id: string;
+  input: string;
+  output: string;
 }
+
+

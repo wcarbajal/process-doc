@@ -5,20 +5,10 @@ import { prisma } from '@/lib/prisma';
 
 export default async function ProcessMap() {
 
-  const processList = await prisma.process.findMany( {
-    include: {
-      Manager: {
-        include: {
-          user: true
-        },
-      },
-      owner: {
-        include: {
-          user: true
-        },
-      },
-    },
-  } );
+
+    const mapa = await prisma.mapa.findFirst() // Aquí se debería obtener la lista de procesos desde la BD
+
+  
   //todo: Luego reemplazar con process list
     const procesosEstrategicos = listProcess.filter( item => item.tipo === "PE" );
     const procesosOperativos = listProcess.filter( item => item.tipo === "PO" );
@@ -29,7 +19,7 @@ export default async function ProcessMap() {
     <DefaultLayout>
       {/* Titulo de Mapa */ }
       <p className="text-xl text-center font-bold mb-5">{ Mapa.nombre }</p>
-      <MapaProcesos pEstrategicos={ procesosEstrategicos } pOperativos={ procesosOperativos } pSoporte={ procesosSoporte } mapa={ Mapa } />
+      <MapaProcesos pEstrategicos={ procesosEstrategicos } pOperativos={ procesosOperativos } pSoporte={ procesosSoporte } mapa={ mapa ?? null } />
     </DefaultLayout>
   );
 }
