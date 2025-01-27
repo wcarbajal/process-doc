@@ -16,10 +16,10 @@ export const incialData: SeedData = {
 
   manager: [
     {
-      userId: 'cm6eejwbx0000cmu4yngfh6xc',
+      userId: 'cm6f5tmww0000ht10i8e8by86',
     },
     {
-      userId: 'cm6eejwbx0001cmu4i3dwqsc2',
+      userId: 'cm6f5tmww0001ht10ho5d03dq',
     },
   ],
 };

@@ -1,18 +1,22 @@
 import { MapaProcesos } from '@/components';
 import DefaultLayout from '@/components/Layouts/DefaultLayout';
-import { listProcess, Mapa } from '@/components/MapaProcesos/processList';
+import { Mapa } from '@/components/MapaProcesos/processList';
 import { prisma } from '@/lib/prisma';
 
 export default async function ProcessMap() {
 
 
-    const mapa = await prisma.mapa.findFirst() // Aquí se debería obtener la lista de procesos desde la BD
+    const mapa = await prisma.mapa.findFirst({
+      include:{
+        process:true
+      }
+    }) // Aquí se debería obtener la lista de procesos desde la BD
 
   
   //todo: Luego reemplazar con process list
-    const procesosEstrategicos = listProcess.filter( item => item.tipo === "PE" );
-    const procesosOperativos = listProcess.filter( item => item.tipo === "PO" );
-    const procesosSoporte = listProcess.filter( item => item.tipo === "PS" );
+    const procesosEstrategicos = mapa?.process.filter( item => item.type === "strategy" );
+    const procesosOperativos = mapa?.process.filter( item => item.type === "operative" );
+    const procesosSoporte = mapa?.process.filter( item => item.type === "support" );
 
   return (
 

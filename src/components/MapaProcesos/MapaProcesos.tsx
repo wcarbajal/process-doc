@@ -1,29 +1,16 @@
 'use client';
 import { Process, Mapa } from '@/interface';
 import "@/css/style.css";
-import { MdClose, MdModeEditOutline, MdOutlineEdit } from 'react-icons/md';
-import { RiEditLine } from "react-icons/ri";
-import { useState } from 'react';
+
 import { ItemProcess } from './ItemProcess';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from '../ui/button';
-import { UpdateInputMap, UpdateOutputMap } from '@/actions';
-import { redirect } from 'next/navigation';
+
 import { InputOutput } from './artefacts/InputOutput';
 
 
 interface Props {
-  pEstrategicos: Process[];
-  pOperativos: Process[];
-  pSoporte: Process[];
+  pEstrategicos: Process[] | undefined;
+  pOperativos: Process[] | undefined;
+  pSoporte: Process[] | undefined;
   mapa: Mapa | null;
 }
 
@@ -52,9 +39,12 @@ export const MapaProcesos = ( { pEstrategicos, pOperativos, pSoporte, mapa }: Pr
           <div>
             <div className="grid grid-cols-2 gap-4 place-items-center w-[930px] h-56 bg-gray-400  rounded-md">
               {
+                pEstrategicos ? (
                 pEstrategicos.map( ( process ) => (
-                  <ItemProcess key={ process.codigo } codigo={ process.codigo } nombre={ process.nombre } isOperative={ false } />
+                  <ItemProcess key={ process.code } codigo={ process.code } nombre={ process.name } isOperative={ false } />
                 ) )
+              )
+              :<>Sin procesos estrategicos</>
               }
 
             </div>
@@ -67,11 +57,14 @@ export const MapaProcesos = ( { pEstrategicos, pOperativos, pSoporte, mapa }: Pr
 
             <div className="flex items-center justify-items-center w-[930px] h-48  bg-sky-400  rounded-md">
               {
+                pOperativos ? (
                 pOperativos.map( ( process, item ) => (
                   <div key={ item } className="flex">
-                    <ItemProcess key={ process.codigo } codigo={ process.codigo } nombre={ process.nombre } isOperative={ true } />
+                    <ItemProcess key={ process.code } codigo={ process.code } nombre={ process.name } isOperative={ true } />
                   </div>
                 ) )
+              )
+              : (<>Sin procesos operativos</>)
               }
             </div>
             <div className="w-0 h-0 border-[20px] border-y-[96px] border-transparent border-l-sky-400 border-r-0"></div>
@@ -83,17 +76,18 @@ export const MapaProcesos = ( { pEstrategicos, pOperativos, pSoporte, mapa }: Pr
             <div className="w-0 h-0 border-[40px] border-x-[465px] border-transparent border-b-green-600 border-t-0"></div>
             <div className="grid grid-cols-3 gap-4 place-items-center w-[930px] h-56 bg-green-600  rounded-md">
               {
+                pSoporte ? (
 
                 pSoporte.map( ( process, item ) => (
-                  <ItemProcess key={ process.codigo } codigo={ process.codigo } nombre={ process.nombre } isOperative={ false } />
+                  <ItemProcess key={ process.code } codigo={ process.code } nombre={ process.name } isOperative={ false } />
                 ) )
+              )
+              : (<>Sin procesos de soporte</>)
               }
 
             </div>
 
           </div>
-
-
 
         </div>
 
