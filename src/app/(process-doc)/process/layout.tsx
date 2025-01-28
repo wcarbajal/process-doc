@@ -55,9 +55,7 @@ export default async function ProcessLayout( {
         </div>
 
         <div className="border w-3/4 h-[85vh]">
-          <div>
-            Resumen o detalles del proceso
-          </div>
+         
           { children }
         </div>
 

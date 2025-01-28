@@ -18,15 +18,15 @@ export const ViewImage = ({
   height
 }: Props) => {
 
-  const localSrc = ( src ) 
+/*   const localSrc = ( src ) 
     ? src.startsWith('http') // https://urlcompletodelaimagen.jpg
       ? src
       : `/src/app/(process-doc)/process/images/${ src }`
-    : '/imgs/placeholder.jpg';
+    : '/imagen/no_disponible.jpg' */;
 
   return (
     <Image
-      src={ localSrc }
+      src={src ?? '/images/sin_imagen.png'}
       width={ width }
       height={ height}
       alt={ alt }
