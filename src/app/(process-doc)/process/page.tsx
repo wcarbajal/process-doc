@@ -2,10 +2,13 @@ import DefaultLayout from '@/components/Layouts/DefaultLayout';
 import React from 'react';
 import { MapaProcesos } from '../../../components/MapaProcesos/MapaProcesos';
 import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { prisma } from '@/lib/prisma';
 
 
-export default function Process() {
+export default async function Process() {
+  const processList =  await prisma.process.findMany()
+  
   return (
     <DefaultLayout >
       <div className="flex gap-2">
@@ -13,23 +16,21 @@ export default function Process() {
 
         <div className="border w-1/4 h-[85vh]">
           <div className="flex">
-            
-            <Input />
 
-            <Button> Send</Button>
+            <Input placeholder="Nombre de proceso... " />
+
+
 
 
           </div>
-          
+
           <div>
             Lista de Procesos
-            <ul>
-              <li>P1</li>
-              <li>P2</li>
-              <li>P3</li>
-              <li>P4</li>
-              <li>P5</li>
-            </ul>
+            <ScrollArea  className="h-[75vh] w-full bg-red-500 rounded-md border p-4">
+              
+              
+            </ScrollArea>
+
           </div>
 
 

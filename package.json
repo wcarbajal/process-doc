@@ -11,12 +11,12 @@
     "seed": "ts-node src/seed/seed.ts",
     "seed2": "ts-node src/seed/seed2.ts",
     "seed3": "ts-node src/seed/seed3.ts"
-
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.7.4",
     "@prisma/client": "^6.2.1",
     "@radix-ui/react-dialog": "^1.1.5",
+    "@radix-ui/react-scroll-area": "^1.2.2",
     "@radix-ui/react-slot": "^1.1.1",
     "@types/bcryptjs": "^2.4.6",
     "apexcharts": "^3.45.2",
