@@ -4,54 +4,35 @@ import { MapaProcesos } from '../../../components/MapaProcesos/MapaProcesos';
 import { Input } from '@/components/ui/input';
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { prisma } from '@/lib/prisma';
+import Link from 'next/link';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { Card } from '@/components/ui/card';
 
 
-export default async function Process() {
-  const processList =  await prisma.process.findMany()
-  
+
+
+export default async function Processes() {
+
+  const mapa = await prisma.mapa.findFirst( {
+    include: {
+      process: true
+    }
+  } ); // Aquí se debería obtener la lista de procesos desde la BD
+
+  const procesosEstrategicos = mapa?.process.filter( item => item.type === "strategy" );
+  const procesosOperativos = mapa?.process.filter( item => item.type === "operative" );
+  const procesosSoporte = mapa?.process.filter( item => item.type === "support" );
+
   return (
-    <DefaultLayout >
-      <div className="flex gap-2">
 
+    <MapaProcesos pEstrategicos={ procesosEstrategicos } pOperativos={ procesosOperativos } pSoporte={ procesosSoporte } mapa={ mapa ?? null } />
 
-        <div className="border w-1/4 h-[85vh]">
-          <div className="flex">
-
-            <Input placeholder="Nombre de proceso... " />
-
-
-
-
-          </div>
-
-          <div>
-            Lista de Procesos
-            <ScrollArea  className="h-[75vh] w-full bg-red-500 rounded-md border p-4">
-              
-              
-            </ScrollArea>
-
-          </div>
-
-
-
-        </div>
-
-        <div className="border w-3/4 h-[85vh]">
-          <div>
-            Resumen o detalles del proceso
-          </div>
-
-          <div>
-            Imagen de proceso
-          </div>
-        </div>
-
-
-
-      </div>
-
-    </DefaultLayout>
 
   );
 }

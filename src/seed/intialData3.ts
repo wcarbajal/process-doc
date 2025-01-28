@@ -11,7 +11,7 @@ interface SeedProcess {
   type: TypeProcess;
   ownerid: string
   mapaId: string;
-  managerId: string
+  managerId: string;
 
 }
 

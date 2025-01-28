@@ -145,11 +145,10 @@ model Process {
   Manager   Manager? @relation(fields: [managerId], references: [id])
   managerId String?
 
-  sons         Process[] @relation("sons")
-  sonsRelation Process[] @relation("sons")
-
   Mapa   Mapa?   @relation(fields: [mapaId], references: [id])
   mapaId String?
+
+  hijos String[]
 }
 
 model Mapa {
