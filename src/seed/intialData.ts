@@ -14,12 +14,8 @@ interface SeedMapa {
   output: string;
 }
 
-interface SeedOwner {
-
-  nombre: string,
-  apellidos: string,
-  unidadFuncional: UnidadFuncional;
-
+interface SeedUnidadFuncional {
+  nombre: string;
 
 }
 
@@ -28,7 +24,8 @@ interface SeedOwner {
 interface SeedData {
   users: SeedUser[];
   mapa: SeedMapa[];
-  owner: SeedOwner[];
+  unidadFuncional: SeedUnidadFuncional[];
+  
 }
 
 export const incialData: SeedData = {
@@ -58,23 +55,33 @@ export const incialData: SeedData = {
     "output": "Ciudadanos que accedieron a educación superior de calidad y contribuyen en el desarrollo económico y social 444"
   }
   ],
-  owner: [
-    {
-      nombre: "Ronald",
-      apellidos: "Coronado",
-      unidadFuncional: 'unidad_funcional_3'
-    },
-    {
-      nombre: "Bruno",
-      apellidos: "Yikas",
-      unidadFuncional: 'unidad_funcional_6'
-    },
-    {
-      nombre: "Dante",
-      apellidos: "Beltran",
-      unidadFuncional: 'unidad_funcional_11'
-    }
-  ],
+  unidadFuncional:[
+    { "nombre": "Dirección Ejecutiva" },
+    { "nombre": "Dirección de Coordinación Nac. y Cooperación Internacional" },
+    { "nombre": "Dirección de Gestión de Becas" },
+    { "nombre": "Subdirección de Evaluación y Selección" },
+    { "nombre": "Subdirección de Seguimiento y Supervisión" },
+    { "nombre": "Dirección de Gestión de Crédito Educativo" },
+    { "nombre": "Subdirección de Evaluación y Otorgamiento" },
+    { "nombre": "Subdirección de Seguimiento y Cumplimiento" },
+    { "nombre": "Dirección de Acompañamiento Socioemocional y Bienestar" },
+    { "nombre": "Oficina de Asesoría Jurídica" },
+    { "nombre": "Oficina de Planeamiento y Presupuesto" },
+    { "nombre": "Unidad de Modernización de La Gestión" },
+    { "nombre": "Unidad de Estudios Sociales e Investigación" },
+    { "nombre": "Unidad de Planeamiento" },
+    { "nombre": "Unidad de Presupuesto" },
+    { "nombre": "Oficina de Tecnologías de la Información" },
+    { "nombre": "Oficina de Gestión de Recursos Humanos" },
+    { "nombre": "Oficina de Atención a la Ciudadanía y Gestión Documental" },
+    { "nombre": "Oficina de Comunicaciones y Relaciones Institucionales" },
+    { "nombre": "Oficina de Administración y Finanzas" },
+    { "nombre": "Unidad de Abastecimiento" },
+    { "nombre": "Unidad de Contabilidad y Control Previo" },
+    { "nombre": "Unidad de Subvenciones y Financiamiento" },
+    { "nombre": "Unidad de Tesorería" }
+  ]
+  
 };
 
 

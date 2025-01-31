@@ -185,11 +185,11 @@ export const FormSignin = () => {
                       minLength: {
                         value: 6,
                         message: 'Mínimo 6 caracteres'
-                      },
+                      }/* ,
                       pattern: {
                         value: /(?=.*[A-Z])/,
                         message: 'Debe contener al menos una letra mayúscula'
-                      }
+                      } */
                     } ) }
                   />
 

@@ -13,6 +13,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card } from '@/components/ui/card';
+import { ViewProcess } from '@/components';
+
 
 
 export default async function ProcessLayout( {
@@ -55,7 +57,9 @@ export default async function ProcessLayout( {
         </div>
 
         <div className="border w-3/4 h-[85vh]">
-         
+          <ViewProcess />
+
+
           { children }
         </div>
 

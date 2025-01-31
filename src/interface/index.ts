@@ -1,2 +1,2 @@
 export * from './auth/auth.interface';
-export * from './process/process';
+export * from './process/process.interface';

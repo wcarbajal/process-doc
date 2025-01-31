@@ -1,19 +1,20 @@
+'use client'
 import { useState } from 'react';
 import { MdClose, MdOutlineEdit } from 'react-icons/md';
 
 interface Props {
-  key: string;
+  itemKey: string;
   codigo: string;
   nombre: string;
   isOperative: boolean;
 }
-export const ItemProcess = ( { key, nombre, codigo, isOperative }: Props ) => {
+export const ItemProcess = ( { nombre, codigo, isOperative, itemKey }: Props ) => {
 
   const [ visile, setVisible ] = useState( false );
   
 
   return (
-    <div key={ key } className="flex " onMouseOver={ () => { setVisible( true ); } } onMouseOut={ () => { setVisible( false ); } }>
+    <div key={ itemKey } className="flex " onMouseOver={ () => { setVisible( true ); } } onMouseOut={ () => { setVisible( false ); } }>
 
       {/* Editar Proceso */ }
       <div hidden={ !visile } className="w-0" >

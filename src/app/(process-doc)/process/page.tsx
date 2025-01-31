@@ -1,18 +1,10 @@
-import DefaultLayout from '@/components/Layouts/DefaultLayout';
+
 import React from 'react';
 import { MapaProcesos } from '../../../components/MapaProcesos/MapaProcesos';
-import { Input } from '@/components/ui/input';
-import { ScrollArea } from "@/components/ui/scroll-area";
+
 import { prisma } from '@/lib/prisma';
-import Link from 'next/link';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { Card } from '@/components/ui/card';
+
+
 
 
 

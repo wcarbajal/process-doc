@@ -23,6 +23,25 @@ export default async function ProcessPage( { params }: Props ) {
     where: { id },
 
   } );
+  const owner = await prisma.owner.findMany({
+    include:{
+      unidadFuncional: {
+        select:{
+          nombre:true
+        }
+      }
+    }
+  });
+  const managers = await prisma.manager.findMany({
+    include: {
+      user:{
+        select:{
+          name: true
+        }
+      }
+    }
+  })
+
   if ( !proceso ) {
     return <>Proceso no encontrado</>;
   }
@@ -36,21 +55,22 @@ export default async function ProcessPage( { params }: Props ) {
         <Button variant='outline'>Diagrama</Button>{/*  */ }
         <Button variant='outline'>Ficha</Button>
         <Button variant='outline'>Procedimiento</Button>
+        <FormProcess owners={ owner } manager={ managers } nombrePadre={ proceso.name } />
       </div>
 
 
 
       <ViewImage src={'/images/model.png'} alt={ 'La imagen va aquí' } width={ 1200 } height={ 600 } className={ 'border' } />
 
-      <div>
+      <>
         Opciones
         <label>
           Agregar hijo:          
         </label>
-        <FormProcess />
+        
         
 
-      </div>
+      </>
 
     </>
 

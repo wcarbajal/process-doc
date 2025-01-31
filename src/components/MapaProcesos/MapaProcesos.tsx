@@ -41,7 +41,7 @@ export const MapaProcesos = ( { pEstrategicos, pOperativos, pSoporte, mapa }: Pr
               {
                 pEstrategicos ? (
                 pEstrategicos.map( ( process ) => (
-                  <ItemProcess key={ process.code } codigo={ process.code } nombre={ process.name } isOperative={ false } />
+                  <ItemProcess key={ process.code } codigo={ process.code } nombre={ process.name } isOperative={ false } itemKey={ process.code } />
                 ) )
               )
               :<>Sin procesos estrategicos</>
@@ -60,7 +60,7 @@ export const MapaProcesos = ( { pEstrategicos, pOperativos, pSoporte, mapa }: Pr
                 pOperativos ? (
                 pOperativos.map( ( process, item ) => (
                   <div key={ item } className="flex">
-                    <ItemProcess key={ process.code } codigo={ process.code } nombre={ process.name } isOperative={ true } />
+                    <ItemProcess key={ process.code } codigo={ process.code } nombre={ process.name } isOperative={ true } itemKey={ process.code } />
                   </div>
                 ) )
               )
@@ -79,7 +79,7 @@ export const MapaProcesos = ( { pEstrategicos, pOperativos, pSoporte, mapa }: Pr
                 pSoporte ? (
 
                 pSoporte.map( ( process, item ) => (
-                  <ItemProcess key={ process.code } codigo={ process.code } nombre={ process.name } isOperative={ false } />
+                  <ItemProcess key={ process.code } codigo={ process.code } nombre={ process.name } isOperative={ false } itemKey={ process.code } />
                 ) )
               )
               : (<>Sin procesos de soporte</>)

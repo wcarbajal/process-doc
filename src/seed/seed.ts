@@ -1,12 +1,13 @@
 import {incialData} from './intialData';
 import { prisma } from '../lib/prisma';
+import { UnidadFuncional } from '@prisma/client';
 
 
 
 async function main() {
 
 //insertar en tablas
-const { users, mapa, owner } =incialData
+const { users, mapa, unidadFuncional } =incialData
 
 await prisma.user.createMany({
   data: users, 
@@ -14,8 +15,8 @@ await prisma.user.createMany({
 await prisma.mapa.createMany({
   data: mapa, 
 })
-await prisma.owner.createMany({
-  data: owner, 
+await prisma.unidadFuncional.createMany({
+  data: unidadFuncional, 
 })
 
   console.log( 'Seed ejecutado correctamente' );
