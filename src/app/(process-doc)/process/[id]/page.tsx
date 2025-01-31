@@ -60,7 +60,7 @@ export default async function ProcessPage( { params }: Props ) {
 
 
 
-      <ViewImage src={'/images/model.png'} alt={ 'La imagen va aquí' } width={ 1200 } height={ 600 } className={ 'border' } />
+      <ViewImage src={'/images/PO01-PRONABEC Planificación estrategica.png'} alt={ 'La imagen va aquí' } width={ 1200 } height={ 600 } className={ 'border' } />
 
       <>
         Opciones

@@ -33,9 +33,9 @@ export const incialData: SeedData = {
       level: "0",
       state: "s1_pendiente",
       type: "strategy",
-      ownerid: "cm6jottl80002cm40m1uohpjh",
-      mapaId: "cm6jlr8nk0003cmnc9sixoe0x",
-      managerId: "cm6joo9kz0000cmrwl2r7vi3x"
+      ownerid: "cm6ktz64z0002ht28q002wt44",
+      mapaId: "cm6ktl40e0003htokiq2nndln",
+      managerId: "cm6ktz66m000cht28evr1ct0n"
     },
     {
       code: "PE02-PRONABEC",
@@ -44,9 +44,9 @@ export const incialData: SeedData = {
       level: "0",
       state: "s1_pendiente",
       type: "strategy",
-      ownerid: "cm6jottl80002cm40m1uohpjh",
-      mapaId: "cm6jlr8nk0003cmnc9sixoe0x",
-      managerId: "cm6joo9kz0000cmrwl2r7vi3x"
+      ownerid: "cm6ktz64z0002ht28q002wt44",
+      mapaId: "cm6ktl40e0003htokiq2nndln",
+      managerId: "cm6ktz66m000cht28evr1ct0n"
     },
     {
       code: "PE03-PRONABEC",
@@ -55,9 +55,9 @@ export const incialData: SeedData = {
       level: "0",
       state: "s1_pendiente",
       type: "strategy",
-      ownerid: "cm6jottl80005cm408tepuq5d",
-      mapaId: "cm6jlr8nk0003cmnc9sixoe0x",
-      managerId: "cm6joo9kz0000cmrwl2r7vi3x"
+      ownerid: "cm6ktz64z0007ht28bwdw19zy",
+      mapaId: "cm6ktl40e0003htokiq2nndln",
+      managerId: "cm6ktz66m000cht28evr1ct0n"
     },
     {
       code: "PE04-PRONABEC",
@@ -66,9 +66,9 @@ export const incialData: SeedData = {
       level: "0",
       state: "s1_pendiente",
       type: "strategy",
-      ownerid: "cm6jottl80002cm40m1uohpjh",
-      mapaId: "cm6jlr8nk0003cmnc9sixoe0x",
-      managerId: "cm6joo9kz0000cmrwl2r7vi3x"
+      ownerid: "cm6ktz64z0002ht28q002wt44",
+      mapaId: "cm6ktl40e0003htokiq2nndln",
+      managerId: "cm6ktz66m000cht28evr1ct0n"
     },
     {
       code: "PO01-PRONABEC",
@@ -77,9 +77,9 @@ export const incialData: SeedData = {
       level: "0",
       state: "s1_pendiente",
       type: "operative",
-      ownerid: "cm6jottl80008cm40vs9v9ncl",
-      mapaId: "cm6jlr8nk0003cmnc9sixoe0x",
-      managerId: "cm6joo9kz0000cmrwl2r7vi3x"
+      ownerid: "cm6ktz64z0008ht287mi29bsw",
+      mapaId: "cm6ktl40e0003htokiq2nndln",
+      managerId: "cm6ktz66m000cht28evr1ct0n"
     },
     {
       code: "PO02-PRONABEC",
@@ -88,9 +88,9 @@ export const incialData: SeedData = {
       level: "0",
       state: "s1_pendiente",
       type: "operative",
-      ownerid: "cm6jottl80008cm40vs9v9ncl",
-      mapaId: "cm6jlr8nk0003cmnc9sixoe0x",
-      managerId: "cm6joo9kz0000cmrwl2r7vi3x"
+      ownerid: "cm6ktz64z0008ht287mi29bsw",
+      mapaId: "cm6ktl40e0003htokiq2nndln",
+      managerId: "cm6ktz66m000cht28evr1ct0n"
     },
     {
       code: "PO03-PRONABEC",
@@ -99,9 +99,9 @@ export const incialData: SeedData = {
       level: "0",
       state: "s1_pendiente",
       type: "operative",
-      ownerid: "cm6jottl80008cm40vs9v9ncl",
-      mapaId: "cm6jlr8nk0003cmnc9sixoe0x",
-      managerId: "cm6joo9kz0000cmrwl2r7vi3x"
+      ownerid: "cm6ktz64z0008ht287mi29bsw",
+      mapaId: "cm6ktl40e0003htokiq2nndln",
+      managerId: "cm6ktz66m000cht28evr1ct0n"
     },
     {
       code: "PO04-PRONABEC",
@@ -110,9 +110,9 @@ export const incialData: SeedData = {
       level: "0",
       state: "s1_pendiente",
       type: "operative",
-      ownerid: "cm6jottl80008cm40vs9v9ncl",
-      mapaId: "cm6jlr8nk0003cmnc9sixoe0x",
-      managerId: "cm6joo9kz0000cmrwl2r7vi3x"
+      ownerid: "cm6ktz64z0008ht287mi29bsw",
+      mapaId: "cm6ktl40e0003htokiq2nndln",
+      managerId: "cm6ktz66m000cht28evr1ct0n"
     },
     {
       code: "PS01-PRONABEC",
@@ -121,9 +121,9 @@ export const incialData: SeedData = {
       level: "0",
       state: "s1_pendiente",
       type: "support",
-      ownerid: "cm6jottl80006cm40uag3a8xk",
-      mapaId: "cm6jlr8nk0003cmnc9sixoe0x",
-      managerId: "cm6joo9kz0000cmrwl2r7vi3x"
+      ownerid: "cm6ktz64z0006ht28agfs61hr",
+      mapaId: "cm6ktl40e0003htokiq2nndln",
+      managerId: "cm6ktz66m000cht28evr1ct0n"
     },
     {
       code: "PS02-PRONABEC",
@@ -132,9 +132,9 @@ export const incialData: SeedData = {
       level: "0",
       state: "s1_pendiente",
       type: "support",
-      ownerid: "cm6jottl80004cm40311t1kyt",
-      mapaId: "cm6jlr8nk0003cmnc9sixoe0x",
-      managerId: "cm6joo9kz0000cmrwl2r7vi3x"
+      ownerid: "cm6ktz64z0004ht28shbbdy5x",
+      mapaId: "cm6ktl40e0003htokiq2nndln",
+      managerId: "cm6ktz66m000cht28evr1ct0n"
     },
     {
       code: "PS03-PRONABEC",
@@ -143,9 +143,9 @@ export const incialData: SeedData = {
       level: "0",
       state: "s1_pendiente",
       type: "support",
-      ownerid: "cm6jottl80004cm40311t1kyt",
-      mapaId: "cm6jlr8nk0003cmnc9sixoe0x",
-      managerId: "cm6joo9kz0000cmrwl2r7vi3x"
+      ownerid: "cm6ktz64z0004ht28shbbdy5x",
+      mapaId: "cm6ktl40e0003htokiq2nndln",
+      managerId: "cm6ktz66m000cht28evr1ct0n"
     },
     {
       code: "PS04-PRONABEC",
@@ -154,9 +154,9 @@ export const incialData: SeedData = {
       level: "0",
       state: "s1_pendiente",
       type: "support",
-      ownerid: "cm6jottl80003cm40d3q5umyz",
-      mapaId: "cm6jlr8nk0003cmnc9sixoe0x",
-      managerId: "cm6joo9kz0000cmrwl2r7vi3x"
+      ownerid: "cm6ktz64z0003ht28odpa3rja",
+      mapaId: "cm6ktl40e0003htokiq2nndln",
+      managerId: "cm6ktz66m000cht28evr1ct0n"
     },
     {
       code: "PS05-PRONABEC",
@@ -165,9 +165,9 @@ export const incialData: SeedData = {
       level: "0",
       state: "s1_pendiente",
       type: "support",
-      ownerid: "cm6jottl80001cm40stiphvlq",
-      mapaId: "cm6jlr8nk0003cmnc9sixoe0x",
-      managerId: "cm6joo9kz0000cmrwl2r7vi3x"
+      ownerid: "cm6ktz64z0001ht281x9b7rnv",
+      mapaId: "cm6ktl40e0003htokiq2nndln",
+      managerId: "cm6ktz66m000cht28evr1ct0n"
     },
     {
       code: "PS06-PRONABEC",
@@ -176,9 +176,9 @@ export const incialData: SeedData = {
       level: "0",
       state: "s1_pendiente",
       type: "support",
-      ownerid: "cm6jottl80007cm40d1qezomg",
-      mapaId: "cm6jlr8nk0003cmnc9sixoe0x",
-      managerId: "cm6joo9kz0000cmrwl2r7vi3x"
+      ownerid: "cm6ktz64z0007ht28bwdw19zy",
+      mapaId: "cm6ktl40e0003htokiq2nndln",
+      managerId: "cm6ktz66m000cht28evr1ct0n"
     }
   ]
 };

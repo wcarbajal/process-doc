@@ -21,25 +21,25 @@ export const incialData: SeedData = {
 
   manager: [
     {
-      userId: 'cm6jlr8mz0000cmnc62cxro6w',
+      userId: 'cm6ktl3ya0000htok77wexr3f',
     },
     {
-      userId: 'cm6jlr8mz0001cmncbae8hoqb',
+      userId: 'cm6ktl3yt0002htokgvx2wscu',
     },
   ],
   owner:[
-    { "nombre": "Alexandra", "apellidos": "Ames Brachowicz", "unidadFuncionalId": "cm6jlr8no0004cmncay5x1vo0" },
-    { "nombre": "César Paul", "apellidos": "Hernández Pérez", "unidadFuncionalId": "cm6jlr8no000dcmnc1n9nj29t" },
-    { "nombre": "Dante Javier", "apellidos": "Beltran Arias", "unidadFuncionalId": "cm6jlr8no000ecmnc8uv02xdc" },
-    { "nombre": "Andy Erick", "apellidos": "Arellano Chicana", "unidadFuncionalId": "cm6jlr8no000jcmncjq3v1gwb" },
-    { "nombre": "Erik Enrique", "apellidos": "Tello Corrales", "unidadFuncionalId": "cm6jlr8no000ncmncr2hbcvm8" },
-    { "nombre": "Mariana", "apellidos": "Cerrón Cerrón", "unidadFuncionalId": "cm6jlr8no000mcmncevtdloal" },
-    { "nombre": "Carlos Fernando", "apellidos": "Dulanto Paniagua", "unidadFuncionalId": "cm6jlr8no000kcmncwel176tp" },
-    { "nombre": "Maricarmen", "apellidos": "Benites Avalo", "unidadFuncionalId": "cm6jlr8no000lcmncvmqtk0dl" },
-    { "nombre": "Ronald", "apellidos": "Coronado Morla", "unidadFuncionalId": "cm6jlr8no0006cmnc0wx5olgm" },
-    { "nombre": "Sol Mariana", "apellidos": "García Belaunde Mora", "unidadFuncionalId": "cm6jlr8no0005cmnc1wc4vaye" },
-    { "nombre": "Bruno Giussepe", "apellidos": "Yika Zapata", "unidadFuncionalId": "cm6jlr8no0009cmnchnfbvo1x" },
-    { "nombre": "Elvira", "apellidos": "Pacherres Mendives De Severino", "unidadFuncionalId": "cm6jlr8no000ccmnc1ykvu6v4" }
+    { "nombre": "Alexandra", "apellidos": "Ames Brachowicz", "unidadFuncionalId": "cm6ktl40p0004htokjobt10y9" },
+    { "nombre": "César Paul", "apellidos": "Hernández Pérez", "unidadFuncionalId": "cm6ktl40p000dhtoksequkki1" },
+    { "nombre": "Dante Javier", "apellidos": "Beltran Arias", "unidadFuncionalId": "cm6ktl40p000ehtok8wstznrj" },
+    { "nombre": "Andy Erick", "apellidos": "Arellano Chicana", "unidadFuncionalId": "cm6ktl40p000jhtokf3olt95p" },
+    { "nombre": "Erik Enrique", "apellidos": "Tello Corrales", "unidadFuncionalId": "cm6ktl40p000nhtok6k8qteje" },
+    { "nombre": "Mariana", "apellidos": "Cerrón Cerrón", "unidadFuncionalId": "cm6ktl40p000mhtokk6a7fyi7" },
+    { "nombre": "Carlos Fernando", "apellidos": "Dulanto Paniagua", "unidadFuncionalId": "cm6ktl40p000khtokou1iu5qc" },
+    { "nombre": "Maricarmen", "apellidos": "Benites Avalo", "unidadFuncionalId": "cm6ktl40p000lhtokmy5kgjls" },
+    { "nombre": "Ronald", "apellidos": "Coronado Morla", "unidadFuncionalId": "cm6ktl40p0006htokz2gngoll" },
+    { "nombre": "Sol Mariana", "apellidos": "García Belaunde Mora", "unidadFuncionalId": "cm6ktl40p0005htokbwf5zj1v" },
+    { "nombre": "Bruno Giussepe", "apellidos": "Yika Zapata", "unidadFuncionalId": "cm6ktl40p0009htokzij0t2px" },
+    { "nombre": "Elvira", "apellidos": "Pacherres Mendives De Severino", "unidadFuncionalId": "cm6ktl40p000chtokkjs5ldqv" }
   ]
   
 };

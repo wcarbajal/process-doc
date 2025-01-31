@@ -1,6 +1,7 @@
 import { GoWorkflow } from 'react-icons/go';
 import { IoHomeOutline } from "react-icons/io5";
 import { FcProcess } from "react-icons/fc";
+import { RiTeamLine } from "react-icons/ri";
 
 export const menuGroups = [
   {
@@ -21,6 +22,11 @@ export const menuGroups = [
         icon: <GoWorkflow />,
         label: "Procesos",
         route: "/process",
+      },
+      {
+        icon: <RiTeamLine />,
+        label: "Dueños de procesos",
+        route: "/owners",
       },
       {
         icon: (
