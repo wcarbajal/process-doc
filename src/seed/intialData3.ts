@@ -1,5 +1,5 @@
 import { State, TypeProcess, UnidadFuncional } from '@prisma/client';
-import bcrypt from 'bcryptjs';
+
 
 
 interface SeedProcess {
@@ -33,9 +33,9 @@ export const incialData: SeedData = {
       level: "0",
       state: "s1_pendiente",
       type: "strategy",
-      ownerid: "cm6ktz64z0002ht28q002wt44",
-      mapaId: "cm6ktl40e0003htokiq2nndln",
-      managerId: "cm6ktz66m000cht28evr1ct0n"
+      ownerid: "cm6moqjuv0006cm984itskr12",
+      mapaId: "cm6mogojf0003cml094k02m6o",
+      managerId: "cm6moqjvf000ccm98vf2zzdc8"
     },
     {
       code: "PE02-PRONABEC",
@@ -44,9 +44,9 @@ export const incialData: SeedData = {
       level: "0",
       state: "s1_pendiente",
       type: "strategy",
-      ownerid: "cm6ktz64z0002ht28q002wt44",
-      mapaId: "cm6ktl40e0003htokiq2nndln",
-      managerId: "cm6ktz66m000cht28evr1ct0n"
+      ownerid: "cm6moqjuv0006cm984itskr12",
+      mapaId: "cm6mogojf0003cml094k02m6o",
+      managerId: "cm6moqjvf000ccm98vf2zzdc8"
     },
     {
       code: "PE03-PRONABEC",
@@ -55,9 +55,9 @@ export const incialData: SeedData = {
       level: "0",
       state: "s1_pendiente",
       type: "strategy",
-      ownerid: "cm6ktz64z0007ht28bwdw19zy",
-      mapaId: "cm6ktl40e0003htokiq2nndln",
-      managerId: "cm6ktz66m000cht28evr1ct0n"
+      ownerid: "cm6moqjuv0001cm98sfhkkivr",
+      mapaId: "cm6mogojf0003cml094k02m6o",
+      managerId: "cm6moqjvf000ccm98vf2zzdc8"
     },
     {
       code: "PE04-PRONABEC",
@@ -66,9 +66,9 @@ export const incialData: SeedData = {
       level: "0",
       state: "s1_pendiente",
       type: "strategy",
-      ownerid: "cm6ktz64z0002ht28q002wt44",
-      mapaId: "cm6ktl40e0003htokiq2nndln",
-      managerId: "cm6ktz66m000cht28evr1ct0n"
+      ownerid: "cm6moqjuv0006cm984itskr12",
+      mapaId: "cm6mogojf0003cml094k02m6o",
+      managerId: "cm6moqjvf000ccm98vf2zzdc8"
     },
     {
       code: "PO01-PRONABEC",
@@ -77,9 +77,9 @@ export const incialData: SeedData = {
       level: "0",
       state: "s1_pendiente",
       type: "operative",
-      ownerid: "cm6ktz64z0008ht287mi29bsw",
-      mapaId: "cm6ktl40e0003htokiq2nndln",
-      managerId: "cm6ktz66m000cht28evr1ct0n"
+      ownerid: "cm6moqjuv0002cm986vnwog4v",
+      mapaId: "cm6mogojf0003cml094k02m6o",
+      managerId: "cm6moqjvf000ccm98vf2zzdc8"
     },
     {
       code: "PO02-PRONABEC",
@@ -88,9 +88,9 @@ export const incialData: SeedData = {
       level: "0",
       state: "s1_pendiente",
       type: "operative",
-      ownerid: "cm6ktz64z0008ht287mi29bsw",
-      mapaId: "cm6ktl40e0003htokiq2nndln",
-      managerId: "cm6ktz66m000cht28evr1ct0n"
+      ownerid: "cm6moqjuv0002cm986vnwog4v",
+      mapaId: "cm6mogojf0003cml094k02m6o",
+      managerId: "cm6moqjvf000ccm98vf2zzdc8"
     },
     {
       code: "PO03-PRONABEC",
@@ -99,9 +99,9 @@ export const incialData: SeedData = {
       level: "0",
       state: "s1_pendiente",
       type: "operative",
-      ownerid: "cm6ktz64z0008ht287mi29bsw",
-      mapaId: "cm6ktl40e0003htokiq2nndln",
-      managerId: "cm6ktz66m000cht28evr1ct0n"
+      ownerid: "cm6moqjuv0002cm986vnwog4v",
+      mapaId: "cm6mogojf0003cml094k02m6o",
+      managerId: "cm6moqjvf000ccm98vf2zzdc8"
     },
     {
       code: "PO04-PRONABEC",
@@ -110,9 +110,9 @@ export const incialData: SeedData = {
       level: "0",
       state: "s1_pendiente",
       type: "operative",
-      ownerid: "cm6ktz64z0008ht287mi29bsw",
-      mapaId: "cm6ktl40e0003htokiq2nndln",
-      managerId: "cm6ktz66m000cht28evr1ct0n"
+      ownerid: "cm6moqjuv0002cm986vnwog4v",
+      mapaId: "cm6mogojf0003cml094k02m6o",
+      managerId: "cm6moqjvf000ccm98vf2zzdc8"
     },
     {
       code: "PS01-PRONABEC",
@@ -121,9 +121,9 @@ export const incialData: SeedData = {
       level: "0",
       state: "s1_pendiente",
       type: "support",
-      ownerid: "cm6ktz64z0006ht28agfs61hr",
-      mapaId: "cm6ktl40e0003htokiq2nndln",
-      managerId: "cm6ktz66m000cht28evr1ct0n"
+      ownerid: "cm6moqjuv0008cm987ly5qqq9",
+      mapaId: "cm6mogojf0003cml094k02m6o",
+      managerId: "cm6moqjvf000ccm98vf2zzdc8"
     },
     {
       code: "PS02-PRONABEC",
@@ -132,9 +132,9 @@ export const incialData: SeedData = {
       level: "0",
       state: "s1_pendiente",
       type: "support",
-      ownerid: "cm6ktz64z0004ht28shbbdy5x",
-      mapaId: "cm6ktl40e0003htokiq2nndln",
-      managerId: "cm6ktz66m000cht28evr1ct0n"
+      ownerid: "cm6moqjuv000bcm98o7sulimx",
+      mapaId: "cm6mogojf0003cml094k02m6o",
+      managerId: "cm6moqjvf000ccm98vf2zzdc8"
     },
     {
       code: "PS03-PRONABEC",
@@ -143,9 +143,9 @@ export const incialData: SeedData = {
       level: "0",
       state: "s1_pendiente",
       type: "support",
-      ownerid: "cm6ktz64z0004ht28shbbdy5x",
-      mapaId: "cm6ktl40e0003htokiq2nndln",
-      managerId: "cm6ktz66m000cht28evr1ct0n"
+      ownerid: "cm6moqjuv000bcm98o7sulimx",
+      mapaId: "cm6mogojf0003cml094k02m6o",
+      managerId: "cm6moqjvf000ccm98vf2zzdc8"
     },
     {
       code: "PS04-PRONABEC",
@@ -154,9 +154,9 @@ export const incialData: SeedData = {
       level: "0",
       state: "s1_pendiente",
       type: "support",
-      ownerid: "cm6ktz64z0003ht28odpa3rja",
-      mapaId: "cm6ktl40e0003htokiq2nndln",
-      managerId: "cm6ktz66m000cht28evr1ct0n"
+      ownerid: "cm6moqjuv0007cm98bj2jlpot",
+      mapaId: "cm6mogojf0003cml094k02m6o",
+      managerId: "cm6moqjvf000ccm98vf2zzdc8"
     },
     {
       code: "PS05-PRONABEC",
@@ -165,9 +165,9 @@ export const incialData: SeedData = {
       level: "0",
       state: "s1_pendiente",
       type: "support",
-      ownerid: "cm6ktz64z0001ht281x9b7rnv",
-      mapaId: "cm6ktl40e0003htokiq2nndln",
-      managerId: "cm6ktz66m000cht28evr1ct0n"
+      ownerid: "cm6moqjuv0005cm98yeijym98",
+      mapaId: "cm6mogojf0003cml094k02m6o",
+      managerId: "cm6moqjvf000ccm98vf2zzdc8"
     },
     {
       code: "PS06-PRONABEC",
@@ -176,9 +176,9 @@ export const incialData: SeedData = {
       level: "0",
       state: "s1_pendiente",
       type: "support",
-      ownerid: "cm6ktz64z0007ht28bwdw19zy",
-      mapaId: "cm6ktl40e0003htokiq2nndln",
-      managerId: "cm6ktz66m000cht28evr1ct0n"
+      ownerid: "cm6moqjuv0009cm98b8s9i7pl",
+      mapaId: "cm6mogojf0003cml094k02m6o",
+      managerId: "cm6moqjvf000ccm98vf2zzdc8"
     }
   ]
 };

@@ -6,7 +6,7 @@ import ClickOutside from "@/components/ClickOutside";
 import { signOut } from 'next-auth/react';
 import { auth } from '@/auth';
 
-const DropdownUser =  () => {
+const TopMenuUser =  () => {
 
    
    
@@ -22,13 +22,13 @@ const DropdownUser =  () => {
 
 
   return (
-    <ClickOutside onClick={() => setDropdownOpen(false)} className="relative">
+    <ClickOutside onClick={() => setDropdownOpen(false)} className="relative ">
       <Link
         onClick={() => setDropdownOpen(!dropdownOpen)}
         className="flex items-center gap-4"
         href="#"
       >
-        <span className="hidden text-right lg:block">
+        <span className="hidden text-right xl:block">
           <span className="block text-sm font-medium text-black dark:text-white">
             Thomas Anree
           </span>
@@ -74,7 +74,7 @@ const DropdownUser =  () => {
             <li>
               <Link
                 href="/profile"
-                className="flex items-center gap-3.5 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base"
+                className="flex items-center gap-3.5 text-sm font-medium duration-300 ease-in-out hover:text-primary xl:text-base"
               >
                 <svg
                   className="fill-current"
@@ -99,7 +99,7 @@ const DropdownUser =  () => {
             <li>
               <Link
                 href="#"
-                className="flex items-center gap-3.5 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base"
+                className="flex items-center gap-3.5 text-sm font-medium duration-300 ease-in-out hover:text-primary xl:text-base"
               >
                 <svg
                   className="fill-current"
@@ -120,7 +120,7 @@ const DropdownUser =  () => {
             <li>
               <Link
                 href="/settings"
-                className="flex items-center gap-3.5 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base"
+                className="flex items-center gap-3.5 text-sm font-medium duration-300 ease-in-out hover:text-primary xl:text-base"
               >
                 <svg
                   className="fill-current"
@@ -143,7 +143,7 @@ const DropdownUser =  () => {
               </Link>
             </li>
           </ul>
-          <button onClick={handleClick} className="flex items-center gap-3.5 px-6 py-4 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base">
+          <button onClick={handleClick} className="flex items-center gap-3.5 px-6 py-4 text-sm font-medium duration-300 ease-in-out hover:text-primary xl:text-base">
             <svg
               className="fill-current"
               width="22"
@@ -170,4 +170,4 @@ const DropdownUser =  () => {
   );
 };
 
-export default DropdownUser;
+export default TopMenuUser;

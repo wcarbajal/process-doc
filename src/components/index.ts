@@ -21,7 +21,7 @@ export * from './FormElements/index';
 export * from './Header/DarkModeSwitcher';
 export * from './Header/DropdownMessage';
 export * from './Header/DropdownNotification';
-export * from './Header/DropdownUser';
+export * from './Header/TopMenuUser';
 export * from './Header/index';
 export * from './Image/ViewImage';
 export * from './Layouts/DefaultLayout';
